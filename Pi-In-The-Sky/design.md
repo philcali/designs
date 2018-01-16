@@ -60,5 +60,28 @@ __Legend__
 1. API checks for record, asks for code
 1. User record is stored permanently, web sessions are generated.
 
+## Registration
+
+Registration is interesting, since the physical machine is outside of my control.
+As a vendable solution, I envision this being a package that people install on Pis
+they or a custom OS distribution at most.
+
+Registration starts on the Pi. The Pi prompts the user to complete the registration
+using a URL provided, which initiates the entire OAuth handshake. Once the OAuth handshake
+is completed, the device will be registered. A registered device will show up on the
+homepage dashboard as a configurable device.
+
+![Registration Workflow][3]
+
+__Legend__
+
+1. User installs embedded server on Pi w/camera
+1. Pi prompts user for register device, starts OAuth workflow
+1. API redirects user to Google
+1. User authorizes applications, application displays registration code
+1. Code is pasted in Pi console
+1. Pi is registered through API, and is therefore connected to User account.
+
 [1]: https://ring.com/
 [2]: Pi-In-The-Sky_Signup.png
+[3]: Pi-In-The-Sky_Registration.png
