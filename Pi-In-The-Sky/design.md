@@ -171,4 +171,4 @@ __Legend__
 [3]: images/Pi-In-The-Sky_Registration.png
 [4]: images/Pi-In-The-Sky_Management.png
 [5]: images/Pi-In-The-Sky_Motion.png
-[5]: images/Pi-In-The-Sky_Live.png
+[6]: images/Pi-In-The-Sky_Live.png
