@@ -23,14 +23,16 @@ There are not many components to this service:
 1. Proxy server (to handle individual streams)
 1. Embedded Pi software to communicate to API
 
-## Infrastructure Phase 1
+## Infrastructure Prototype
 
 In order to save operating costs, the entire application will run on AWS
 serverless technology. The entire worflow can be API driven with the
 exception of the video stream. Unfortunately, the capabilities of the
 Raspberry Pi + plus browser really break down in this area.
-This is intentionally labeled _Phase 1_ to explain that the proxy server
-will be my home machine deployable onto potential EC2 hosts in the future.
+This is intentionally labeled _Prototype_ to explain that the proxy server
+will be my home machine software deployable onto potential EC2 hosts in the future.
+I will actually be running kubernetes locally to simumlate isolated container
+proxies.
 
 1. S3 - House video streams, HTML, JS
 1. Lambda - Single function that handles all API communication
@@ -172,3 +174,18 @@ __Legend__
 [4]: images/Pi-In-The-Sky_Management.png
 [5]: images/Pi-In-The-Sky_Motion.png
 [6]: images/Pi-In-The-Sky_Live.png
+
+## Infrastructure Changes for Production Environment
+
+A more sofisticated and scalable architecture involves replacing the middleman proxy server,
+and moving the connection points to scalable, managed endpoints.
+All video streams could be ingested via Kinesis directly from the Pi, which has been registered
+as a _thing_ in IoT. Motion detection can be triggered from a Lambda function that scales horizontally.
+Onboarding with IoT handles all of the AWS resource authorization and device
+visibility directly from the AWS console. Live video streaming is still a challenge, but could be
+handled by reading most recent frames from indexed data off the stream. The proxy server in the
+previous diagrams could be repaced with an elastic Kubernetes cluster that spins up a Kinesis
+Video consumer for a websoket browser session.
+
+Easily the most incredible part about the proposed architecture changes is that it minimally diverges
+from the existing prototype, but scales horizontally with AWS infrastructure.
