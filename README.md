@@ -17,6 +17,8 @@ writing, my digital design tool of choice is [draw.io][1].
 - The Sweeper
 - Shopitron
 - [Pi In The Sky][2]
+- [Serverless Patterns][3]
 
 [1]: https://www.draw.io/
 [2]: https://github.com/philcali/designs/blob/master/Pi-In-The-Sky/design.md
+[2]: https://github.com/philcali/designs/blob/master/Serverless-Patterns/design.md
