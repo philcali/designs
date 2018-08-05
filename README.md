@@ -21,4 +21,4 @@ writing, my digital design tool of choice is [draw.io][1].
 
 [1]: https://www.draw.io/
 [2]: https://github.com/philcali/designs/blob/master/Pi-In-The-Sky/design.md
-[2]: https://github.com/philcali/designs/blob/master/Serverless-Patterns/design.md
+[3]: https://github.com/philcali/designs/blob/master/Serverless-Patterns/design.md
